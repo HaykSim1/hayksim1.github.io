@@ -13,7 +13,7 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
+import heroImage from '../images/header.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
@@ -25,7 +25,7 @@ import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
+import profilepic from '../images/me.jpeg';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -44,8 +44,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Hayk Simonyan',
+  description: "Softarware Engineer's personal website",
 };
 
 /**
@@ -69,32 +69,29 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Hayk Simonyan.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I’m a <strong className="text-stone-100">Full Stack Software Engineer</strong> from Armenia , currently working
+        at <strong className="text-stone-100">EPAM</strong> o build modern, mobile-first solutions for clients around the world.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time, you can catch me <strong className="text-stone-100"> snowboarding</strong>,
+        going <strong className="text-stone-100">horseback riding</strong>, or <strong className="text-stone-100">embarking
+        on solo travels across Europe</strong>,
+        or exploring beautiful{' '}
+        <strong className="text-stone-100">Armenian mountains</strong>.
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: '/CV-Hayk Simonyan.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
-    },
-    {
-      href: `#${SectionId.Contact}`,
-      text: 'Contact',
-      primary: false,
+      download: true,
     },
   ],
 };
@@ -104,16 +101,14 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I’m a Full Stack Software Engineer with over 10 years of experience in both front-end and back-end development. My favorite technologies include JavaScript, React, Next.js, Nest.js, React Native, PostgreSQL, MongoDB, and Material UI. Beyond coding, I love exploring new ideas, solving complex problems, and staying up-to-date with industry best practices. `,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Yerevan, Armenia', Icon: MapIcon},
+    {label: 'Age', text: '31', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Armenian', Icon: FlagIcon},
+    {label: 'Interests', text: 'Snowboarding, Horse riding, Traveling', Icon: SparklesIcon},
+    {label: 'Study', text: 'PhD in Chemical Engineering', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'EPAM', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -126,15 +121,32 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'English',
+        level: 7,
+      },
+      {
+        name: 'Russian',
+        level: 9,
+      },
+      {
+        name: 'Armenian',
+        level: 10,
+      },
+    ],
+  },
+  {
+    name: 'Coding Languages',
+    skills: [
+      {
+        name: 'JavaScript',
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
+        name: 'Php',
+        level: 6,
       },
       {
-        name: 'Spanish',
-        level: 3,
+        name: 'Python',
+        level: 4,
       },
     ],
   },
@@ -143,15 +155,15 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'React',
-        level: 9,
+        level: 10,
       },
       {
         name: 'Typescript',
-        level: 7,
+        level: 8,
       },
       {
-        name: 'GraphQL',
-        level: 6,
+        name: 'Next.js',
+        level: 8,
       },
     ],
   },
@@ -163,12 +175,12 @@ export const skills: SkillGroup[] = [
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'Nest.js',
+        level: 8,
       },
       {
-        name: 'Golang',
-        level: 4,
+        name: 'PostgreSQL and MongoDB',
+        level: 7,
       },
     ],
   },
@@ -178,10 +190,6 @@ export const skills: SkillGroup[] = [
       {
         name: 'React Native',
         level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
       },
       {
         name: 'Swift',
@@ -268,40 +276,139 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'May 2018',
+    location: 'Yerevan, Armenia',
+    title: 'PHD in State Engineering University of Armenia',
+    content: <p>Chemical Engineerinh</p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'July 2016',
+    location: 'Yerevan, Armenia',
+    title: 'Master in NASRA',
+    content: <p>Radio Engineering and Communication</p>,
+  },
+  {
+    date: 'May 2014',
+    location: 'Yerevan, Armenia',
+    title: 'BACHELOR in State Engineering University of Armenia',
+    content: <p>Radio Engineering and Communication</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'Aug 2022 - Present',
+    location: 'Epam Anywhere',
+    title: 'Team Lead/Senior Software Engineer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        <ul>
+          <li>
+            Creating UI library for company use
+          </li>
+          <li>
+            Work with builder tools
+          </li>
+          <li>
+            Create html editor from zero
+          </li>
+          <li>
+            Next.js development and optimization
+          </li>
+        </ul>
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'December 2018 - August 2022',
+    location: 'Betconstruct',
+    title: 'Team Lead/Senior Software Engineer',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+        <p>
+          <ul>
+            <li>
+              Creating UI library for company use
+            </li>
+            <li>
+              Work on Gambling
+            </li>
+            <li>
+              React sportsbook app performance optimization
+            </li>
+            <li>
+              Work with builder tools
+            </li>
+          </ul>
+        </p>
+    ),
+  },
+  {
+    date: 'January 2017 - December 2018',
+    location: 'ApolloBytes',
+    title: 'Team Lead/Scrum Master',
+    content: (
+        <p>
+          <ul>
+            <li>
+              Work on cloud fleet manager soft
+            </li>
+            <li>
+              Work on Crypto Wallet
+            </li>
+            <li>
+              Scrum methodology
+            </li>
+            <li>
+              Legacy code refactoring
+            </li>
+          </ul>
+        </p>
+    ),
+  },
+  {
+    date: 'October 2013 - September 2016',
+    location: 'Ucraft.com',
+    title: 'Senior Software Developer',
+    content: (
+        <p>
+          <ul>
+            <li>
+              Work on ucraft.com
+            </li>
+            <li>
+              Work on drag and drop cms
+            </li>
+            <li>
+              Work on betconstruct Single Sign On System
+            </li>
+            <li>
+              Experience with React, Ember
+            </li>
+          </ul>
+        </p>
+    ),
+  },
+  {
+    date: 'March 2012 - September 2013',
+    location: 'Crossnet',
+    title: 'Software Developer',
+    content: (
+        <p>
+          <ul>
+            <li>
+              Work on IP PBX
+            </li>
+            <li>
+              Local CRM
+            </li>
+            <li>
+              User call cost calculation functional
+            </li>
+            <li>
+              Experience with C# and Php
+            </li>
+          </ul>
+        </p>
     ),
   },
 ];
@@ -313,19 +420,19 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+      name: 'Grigor Avagyan',
+      text: `I know Hayk for very long time and we did lots of projects together, his speed and professionalism always wondered me and not even talking about his work quality. Strongly recommend him!`,
+      image: 'https://media.licdn.com/dms/image/v2/D4D03AQHLl-bPjSxoAA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1669643474476?e=1740614400&v=beta&t=HTPAOWxK_8gi-W_vAUNY9yUhFs8vOsJyWmaYatMNJu8',
     },
     {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
+      name: 'Levon Azizyan',
+      text: `Hayk was one of key members and top level professionals in ApolloBytes FrontEnd team. I know him as a self-motivated, goal oriented and very hard-working employee. Personally, he is easy going and positive. I enjoyed the time working with him.`,
+      image: 'https://media.licdn.com/dms/image/v2/C5603AQE26XpTJMMNWA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1548766765636?e=1740614400&v=beta&t=5liD7LTXWZHUllqvoSIOz5rrL90Tri5vvFTaZKx5FW0',
     },
     {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      name: 'Arthur Hakobyan',
+      text: `Hayk is a strong professional, able to tackle on any task quickly, build a team and close colleagues to pursue ultimate goal. He was always ready to learn new techniques and use his own insight to improve the product.`,
+      image: 'https://media.licdn.com/dms/image/v2/C4D03AQFQ13nXYObp3g/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1573812049879?e=1740614400&v=beta&t=3SZP7sNmqrMS1nQP_yB-aS4qVEMKYPjgSalZbGJIK1c',
     },
   ],
 };
@@ -365,9 +472,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/hayksim1'},
+  {label: 'Telegram', Icon: StackOverflowIcon, href: 'https://t.me/hayksim1'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/hayksim1'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/simonyanhayk'},
+  {label: 'X', Icon: TwitterIcon, href: 'https://x.com/hayksim1'},
 ];
