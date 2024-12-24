@@ -74,7 +74,7 @@ export const heroData: Hero = {
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         I’m a <strong className="text-stone-100">Full Stack Software Engineer</strong> from Armenia , currently working
-        at <strong className="text-stone-100">EPAM</strong> o build modern, mobile-first solutions for clients around the world.
+        at <strong className="text-stone-100">EPAM</strong> to build modern, mobile-first solutions for clients around the world.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         In my free time, you can catch me <strong className="text-stone-100"> snowboarding</strong>,
